@@ -7,20 +7,14 @@ html {
 body {
   margin: 0;
   padding: 0;
-  width: auto;
-  height: auto;
-  min-height: 100%;
   font-family: "Montserrat",sans-serif;
   line-height: 1.42857;
   font-size: 17px;
   background-color: #FDFDFD;
   color: #163C57;
   word-wrap: normal;
-}
-
-a,a:visited,a:active,a:hover {
-  color: #163C57;
-  text-decoration: underline;
+  width: 100%;
+  height: 100%;
 }
 
 section {
@@ -79,7 +73,7 @@ section {
 }
 
 .floating-signup__wrap {
-  position: fixed;
+  position: absolute;
   z-index: 5;
   padding: 10px;
 }
@@ -155,20 +149,12 @@ section {
   vertical-align: middle;
 }
 
-.loading-state {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  background: url(/res/loading.gif) 50% 45% no-repeat;
-}
-
 .rel {
   position: relative;
 }
 
-.bg-image {
-  background-image: url(/res/livechat-animation.gif);
+.intro-header {
+  background-image: url(/img/livechat-animation.gif);
   background-size: 50%;
   background-attachment: scroll;
   background-position: 100% 50%;
@@ -221,4 +207,25 @@ h1 {
   h1 {
     font-size: 75px;
   }
+}
+
+.container {
+  margin-top: 20px;
+}
+
+#send-field {
+  margin-top: -1px;
+  border-left: 0px;
+}
+
+.intro-header {
+  height: 100%;
+  margin-left: 8%;
+}
+
+.content-section-a {
+  height: 100%;
+  padding: 50px 0;
+  padding-top: 10%;
+  background-color: #f8f8f8;
 }
