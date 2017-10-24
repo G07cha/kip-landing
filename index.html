@@ -12,7 +12,7 @@
     <meta name="og:image" content="" property="og:image">
     <link rel="icon" href="favicon.ico">
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css">
-    <link type="text/css" rel="stylesheet" href="./css/styles.css">
+    <link type="text/css" rel="stylesheet" href="./css/styles.min.css">
   </head>
 
   <body>
@@ -69,29 +69,23 @@
               </div>
               <div class="card-body">
                 <p class="card-text">
-                  <ul>
-                    <li>Loves winter <a href="#">(source)</a></li>
-                    <li>Hates pancakes <a href="#">(source)</a></li>
+                  <ul class="psycho-list">
                   </ul>
                 </p>
-                <a href="#" class="btn btn-primary">Reset</a>
               </div>
             </div>
           </div>
           <div class="col">
-            <ul class="list-group">
-              <li class="list-group-item">Amy: Hi, let's meet tomorrow at 5 am!</li>
-              <li class="list-group-item">Amy: Damn, I love winter so much</li>
-              <li class="list-group-item">Amy: Hello, how are you?</li>
-              <li class="list-group-item">Amy: Dude, I hate those pancakes</li>
-              <li class="list-group-item">Amy: Dunno man, need to think more about this</li>
+            <ul class="list-group message-list">
             </ul>
-            <div class="input-group" id="send-field">
-              <input type="text" class="form-control" placeholder="Message" aria-label="Message">
-              <span class="input-group-btn">
-                <button class="btn btn-secondary" type="button">Send</button>
-              </span>
-            </div>
+            <form id="message-form">
+              <div class="input-group" id="send-field">
+                <input type="text" id="message-field" class="form-control" placeholder="Message" aria-label="Message">
+                <span class="input-group-btn">
+                  <button class="btn btn-secondary" type="submit">Send</button>
+                </span>
+              </div>
+            </form>
           </div>
           <div class="col">
             <div class="card">
@@ -100,11 +94,9 @@
               </div>
               <div class="card-body">
                 <p class="card-text">
-                  <ul>
-                    <li>Meet with <a href="#">Amy</a> <abbr title="attribute">tomorrow at 5:00 AM</abbr></li>
+                  <ul class="task-list">
                   </ul>
                 </p>
-                <a href="#" class="btn btn-primary">Reset</a>
               </div>
             </div>
           </div>
@@ -112,7 +104,7 @@
       </div>
       <!-- /.container -->
     </section>
-
+    <script src="/js/demo.min.js" charset="utf-8"></script>
   </body>
 
 </html>

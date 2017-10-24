@@ -229,3 +229,8 @@ h1 {
   padding-top: 10%;
   background-color: #f8f8f8;
 }
+
+.message-list {
+  max-height: 250px;
+  overflow-y: auto;
+}
