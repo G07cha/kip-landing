@@ -1,24 +1,14 @@
-const ENDPOINT = 'http://kip-messenger.us-west-2.elasticbeanstalk.com'
+const ENDPOINT = 'http://cors-anywhere.herokuapp.com/http://kip-messenger.us-west-2.elasticbeanstalk.com'
 
-function request(method, url, data) {
-  return fetch(ENDPOINT + url, {
-    method: method,
-    body: JSON.stringify(data),
-    headers: {
-      'Accept': 'application/json, text/plain, */*',
-      'Content-Type': 'application/json'
-    }
-  }).then(function(resp) {
+function request(url) {
+  return fetch(ENDPOINT + url).then(function(resp) {
     return resp.json()
   })
 }
 
 const API = {
   processMessage: function (author, message) {
-    return request('POST', '/processMessage', {
-      author: author,
-      message: message
-    })
+    return request(`/processMessage?author=${author}&message=${message}`)
   }
 }
 
@@ -41,9 +31,10 @@ class List {
 function messageSendHandler(event) {
   event.preventDefault()
   const text = messageInput.value
+  const author = 'Alex'
   
-  messages.add('Alex: ' + text)
-  API.processMessage('Alex', text).then(function(resp) {
+  messages.add(author + ': ' + text)
+  API.processMessage(author, text).then(function(resp) {
     if(typeof resp === 'object') {
       if(resp.type === 'task') {
         tasks.add(resp.output)
