@@ -1,4 +1,4 @@
-const ENDPOINT = 'http://cors-anywhere.herokuapp.com/http://kip-messenger.us-west-2.elasticbeanstalk.com'
+const ENDPOINT = 'http://kip-messenger.us-west-2.elasticbeanstalk.com'
 
 function request(url) {
   return fetch(ENDPOINT + url).then(function(resp) {
